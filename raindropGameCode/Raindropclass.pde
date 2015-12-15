@@ -22,8 +22,10 @@ class Raindrop {
     loc.x = random(width);
     loc.y = 0;
     vel.y = 1;
-   }
-   /*boolean isInContactWith(PVector bucket){
-   
-   }*/
+  }
+  boolean isInContactWith(PVector thing) {
+    if (loc.dist(thing)<diam/2) {
+      return true;
+    }
+  }
 }
