@@ -6,7 +6,7 @@ class Raindrop {
   Raindrop(float locx, float locy) {
     loc = new PVector(locx, locy);
     vel = new PVector(0, 1);
-    diam = 10;
+    diam = 25;
     grav = 0.0981;
   }
   void fall() {
@@ -14,12 +14,16 @@ class Raindrop {
     vel.y += grav;
   }
   void display() {
+    noStroke();
     fill(0, 0, 255);
-    ellipse(loc.x, loc.y, diam, diam/2);
+    ellipse(loc.x, loc.y, diam/2, diam);
   }
-  /*void reset() {
+  void reset() {
+    loc.x = random(width);
+    loc.y = 0;
+    vel.y = 1;
    }
-   boolean isInContactWith(PVector bucket){
+   /*boolean isInContactWith(PVector bucket){
    
    }*/
 }
