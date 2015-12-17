@@ -31,3 +31,16 @@ class Raindrop {
     }
   }
 }
+
+class catcher {
+  PVector loc;
+  float diam; 
+  
+  catcher(float tdiam){
+    diam = tdiam;
+  }
+  void display(){
+    fill(255,0,0);
+    ellipse(mouseX,mouseY, 40, 40);
+  }
+}

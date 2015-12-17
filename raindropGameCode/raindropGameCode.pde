@@ -1,5 +1,6 @@
 PVector mouse;   //declare a P
 Raindrop r;      //declare a new Raindrop called r
+catcher bucket;
 
 // On your own, create an array of Raindrop objects instead of just one
 // Use the array instead of the single object
@@ -21,6 +22,7 @@ void draw() {
     r.reset();                         //if it is, reset the raindrop
   }
   if (r.loc.y > height + r.diam/2) {     //check to see if the raindrop goes below the bottom of the screen
-    r.reset();                           //if it does, reset the raindrop
+    r.reset();      //if it does, reset the raindrop
+    bucket.display();
   }
 }
