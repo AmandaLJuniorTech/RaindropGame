@@ -26,6 +26,8 @@ class Raindrop {
   boolean isInContactWith(PVector thing) {
     if (loc.dist(thing)<diam/2) {
       return true;
+    } else {
+      return false;
     }
   }
 }
