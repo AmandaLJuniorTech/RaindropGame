@@ -28,7 +28,7 @@ void draw() {
      raindrops.remove(i);    //if it does, reset the raindrop
      raindrops.add(new Raindrop(random(0, width), 0));
      float rand = random(1);
-     if (rand <= .25) {
+     if (rand <= .75) {
        raindrops.add(new Raindrop(random(0, width), 0));
      }
      //bucket.display();
