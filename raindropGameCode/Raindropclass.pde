@@ -15,8 +15,8 @@ class Raindrop {
   }
   void display() {
     noStroke();
-    fill(0, 0, 255);
-    ellipse(loc.x, loc.y, diam/2, diam);
+    fill(255,0,0);
+    ellipse(loc.x, loc.y, 2*diam/3, diam);
   }
   void reset() {
     loc.x = random(width);
@@ -41,6 +41,6 @@ class catcher {
   }
   void display() {
     fill(255, 0, 0);
-    ellipse(mouseX, mouseY, 40, 40);
+    rect(mouseX, mouseY, 40, 10);
   }
 }
