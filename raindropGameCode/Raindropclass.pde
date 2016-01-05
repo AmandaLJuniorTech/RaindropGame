@@ -1,13 +1,13 @@
 class Blooddrop { //declare a class for the blood
-  PVector loc;
-  PVector vel;
-  float diam, locx, locy, grav;
+  PVector loc; //declare pvector for location
+  PVector vel; //declare pvector for velocity
+  float diam, locx, locy, grav;  //declare diameter, x location, y location, and gravity
 
-  Blooddrop(float locx, float locy) {
-    loc = new PVector(locx, locy);
-    vel = new PVector(0, 1);
-    diam = 25;
-    grav = 0.0981;
+  Blooddrop(float locx, float locy) { //make a blooddrop at the location the user chooses
+    loc = new PVector(locx, locy); //make the location be 
+    vel = new PVector(0, 1);  //velocity 
+    diam = 25; //diameter of the blooddrop is 25
+    grav = 0.0981; //gravity of the blooddrop is actual gravity
   }
   void fall() {
     loc.add(vel);

@@ -34,8 +34,9 @@ void draw() {
     }
     i ++;
     if (i>= 500) {
-      background(255);
+      background(0);
       textSize(50);
+      fill(200,0,0);
       text("Game Over, You Lose!", width/2, height/2);
       textAlign(CENTER);
     }
