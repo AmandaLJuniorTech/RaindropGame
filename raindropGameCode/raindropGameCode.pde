@@ -1,13 +1,13 @@
 PVector mouse;   //declare a P
-Raindrop r;      //declare a new Raindrop called r
+Blooddrop r;      //declare a new Raindrop called r
 catcher tissue;
-ArrayList<Raindrop> raindrops = new ArrayList<Raindrop>();    //declare and initialize the ArrayList
+ArrayList<Blooddrop> raindrops = new ArrayList<Blooddrop>();    //declare and initialize the ArrayList
 
 
 void setup() {
   size(800, 600);
   mouse = new PVector();                //initialize mouse PVector. value is irrelevant since it will be set at the start of void draw(){}
-  raindrops.add(new Raindrop(width/2, mouseY));    //add a new raindrop to the raindrop ArrayList
+  raindrops.add(new Blooddrop(width/2, mouseY));    //add a new raindrop to the raindrop ArrayList
 }
 
 void draw() {
@@ -26,10 +26,10 @@ void draw() {
     }
     if (r.loc.y > height + r.diam/2) {     //check to see if the raindrop goes below the bottom of the screen
       raindrops.remove(i);    //if it does, reset the raindrop
-      raindrops.add(new Raindrop(random(0, width), 0));
+      raindrops.add(new Blooddrop(random(0, width), 0));
       float rand = random(1);
       if (rand <= .75) {
-        raindrops.add(new Raindrop(random(0, width), 0));
+        raindrops.add(new Blooddrop(random(0, width), 0));
       }
     }
     i ++;

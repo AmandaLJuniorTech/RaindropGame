@@ -1,9 +1,9 @@
-class Raindrop {
+class Blooddrop { //declare a class for the blood
   PVector loc;
   PVector vel;
   float diam, locx, locy, grav;
 
-  Raindrop(float locx, float locy) {
+  Blooddrop(float locx, float locy) {
     loc = new PVector(locx, locy);
     vel = new PVector(0, 1);
     diam = 25;
