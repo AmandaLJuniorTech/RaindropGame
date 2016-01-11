@@ -43,14 +43,14 @@ class catcher {
   }
   void display() {
     rectMode(CENTER);
-    fill(255, 0, 0);
+    fill(255);
     rect(loc.x, loc.y, w, h);
   }
   void update(){
     loc.set(mouseX, mouseY);
   }
-  boolean isCatching(){
-    if (blooddrops.loc.x + blooddrops.diam/2 > loc.x - w/2 && blooddrops.loc.x - blooddrops.diam/2 < loc.x + w/2 && blooddrops.loc.y + blooddrops.diam/2 > loc.y - h/2 && blooddrops.loc.y - blooddrops.diam/2 < loc.y + h/2) {
+  boolean isCatching(Blooddrop droplet){
+    if (droplet.loc.x + droplet.diam/2 > loc.x - w/2 && droplet.loc.x - droplet.diam/2 < loc.x + w/2 && droplet.loc.y + droplet.diam/2 > loc.y - h/2 && droplet.loc.y - droplet.diam/2 < loc.y + h/2) {
   return true;
     }else{
       return false; 

@@ -2,7 +2,7 @@ PVector mouse;   //declare a P
 Blooddrop r;      //declare a new Raindrop called r
 catcher tissue;
 ArrayList<Blooddrop> blooddrops = new ArrayList<Blooddrop>();    //declare and initialize the ArrayList
-int startingBlood = 4;
+int startingBlood = 3;
 
 void setup() {
   size(800, 600);
@@ -24,6 +24,7 @@ void draw() {
   fill(200, 102, 0);
   quad(0, 0, 0, 60, width, 40, width, 0);
   int i = 0;
+  tissue.display();
   while (i < blooddrops.size()) {
     r = blooddrops.get(i);
     r.fall();         //make the raindrop fall. It should accelerate as if pulled towards the ground by earth's gravity
@@ -39,6 +40,13 @@ void draw() {
         blooddrops.add(new Blooddrop(random(0, width), 0));
       }
     }
+    if (tissue.isCatching(r)) {
+
+blooddrops.remove(i);
+
+blooddrops.add(new Blooddrop(random(width), random(height)));
+
+}
     i ++;
     if (i>= 500) {
       background(0);
