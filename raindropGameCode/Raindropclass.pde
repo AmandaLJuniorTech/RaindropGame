@@ -38,7 +38,7 @@ class catcher {
 
   catcher() {
  loc = new PVector();
- w = 50;
+ w = 100;
  h= 20;
   }
   void display() {
