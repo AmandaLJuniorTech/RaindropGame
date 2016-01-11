@@ -34,13 +34,28 @@ class Blooddrop { //declare a class for the blood
 
 class catcher {
   PVector loc;
-  float diam; 
+  int w,h; 
 
-  catcher(float tdiam) {
-    diam = tdiam;
+  catcher() {
+ loc = new PVector();
+ w = 50;
+ h= 20;
   }
   void display() {
+    rectMode(CENTER);
     fill(255, 0, 0);
-    rect(mouseX, mouseY, 40, 10);
+    rect(loc.x, loc.y, w, h);
   }
+  void update(){
+    loc.set(mouseX, mouseY);
+  }
+  boolean isCatching(){
+    if (blooddrops.loc.x + blooddrops.diam/2 > loc.x - w/2 && blooddrops.loc.x - blooddrops.diam/2 < loc.x + w/2 && blooddrops.loc.y + blooddrops.diam/2 > loc.y - h/2 && blooddrops.loc.y - blooddrops.diam/2 < loc.y + h/2) {
+  return true;
+    }else{
+      return false; 
+    }
+  } 
+
+ 
 }

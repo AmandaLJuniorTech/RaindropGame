@@ -2,12 +2,19 @@ PVector mouse;   //declare a P
 Blooddrop r;      //declare a new Raindrop called r
 catcher tissue;
 ArrayList<Blooddrop> blooddrops = new ArrayList<Blooddrop>();    //declare and initialize the ArrayList
-
+int startingBlood = 4;
 
 void setup() {
   size(800, 600);
   mouse = new PVector();                //initialize mouse PVector. value is irrelevant since it will be set at the start of void draw(){}
   blooddrops.add(new Blooddrop(width/2, mouseY));    //add a new raindrop to the raindrop ArrayList
+tissue = new catcher();
+
+for (int i = 0; i < startingBlood; i++) {
+
+blooddrops.add(new Blooddrop(random(width), random(height)));
+
+}
 }
 
 void draw() {
